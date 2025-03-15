@@ -113,7 +113,7 @@
 		"vite-plugin-static-copy": "^2.2.0"
 	},
 	"engines": {
-		"node": ">=18.13.0 <=22.x.x",
-		"npm": ">=6.0.0"
-	}
+  "node": "18.x",
+  "npm": "9.x"
+}
 }
