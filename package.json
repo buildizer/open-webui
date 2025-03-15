@@ -21,9 +21,8 @@
 		"pyodide:fetch": "node scripts/prepare-pyodide.js",
 		"start": "npm run yawla",
 		"yawla": "npm run setup && npm run start-all",
-		"setup": "cp -RPp .env.example .env && npm install && cd backend && conda env create --name open-webui --file environment.yml && conda activate open-webui && pip install -r requirements.txt -U",
-		"start-all": "concurrently \"npm run dev\" \"cd backend && sh dev.sh\""
-	  
+		"setup": "cp -RPp .env.example .env && npm install && cd backend && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt -U",
+		"start-all": "concurrently \"npm run dev\" \"cd backend && source venv/bin/activate && sh dev.sh\""			
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "3.2.2",
